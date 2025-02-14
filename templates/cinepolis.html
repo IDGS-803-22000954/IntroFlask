@@ -1,0 +1,42 @@
+<link href="../static/bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body{
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Cinépolis_logo.svg/3000px-Cinépolis_logo.svg.png');
+        background-size: 100%; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+    }
+    .transparente {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+    }
+</style>
+<h1 class="text-center bg-secondary">Cinepolis</h1>
+<div class="container d-flex justify-content-center align-items-center">
+    <form action="/cine" method="post" class="row">
+        <div class="border border-2 col-1 transparente">
+            <h3>Entradas</h3>
+            <label>Nombre:</label>
+            <input type="text" name="nombre"><br>
+            <label>Cantidad compradores:</label>
+            <input type="number" name="ccompradores"><br>
+            <label>Tarjeta cineco</label>
+            <label for="si">Si</label>
+            <input type="radio" id="si" name="tarjeta" value="si">
+            <label for="no">No</label>
+            <input type="radio" id="no" name="tarjeta" value="no"><br>
+            <label>Cantidad de boletas:</label>
+            <input type="number" name="cboletas"><br>
+        </div>
+        <div class="border border-2 col-6 transparente">
+            <h3>Salidas</h3>
+            <label for="pagar">Valor a pagar:</label>
+            <p>{{r}}</p>
+        </div>
+        <div class="border border-2 transparente">
+            <h3>Acciones</h3>
+            <input type="submit" value="Procesar" class="btn btn-primary">
+        </div>
+        
+    </form>
+</div>
